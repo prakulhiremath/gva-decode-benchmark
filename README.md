@@ -1,6 +1,6 @@
 # GVA-style decode benchmark prototype
 
-A small, independent operator-level experiment comparing a GQA reference with a GVA-style attention prototype. The benchmark uses synthetic caches and the published dimensions of Qwen2.5-0.5B-Instruct. It is not an implementation of FrontiersMind's code or an end-to-end model benchmark.
+A small, independent operator-level experiment comparing a GQA reference with a GVA-style attention prototype. The benchmark uses synthetic caches and the published dimensions of Qwen2.5-0.5B-Instruct. 
 
 ## Setup
 
