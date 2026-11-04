@@ -1,0 +1,59 @@
+{
+  "trials": 5,
+  "device": "mps",
+  "dtype": "float16",
+  "results": [
+    {
+      "context": 512,
+      "gqa_median_ms": 1.2567079999999953,
+      "gva_median_ms": 1.1246874999999434,
+      "gqa_mean_ms": 1.1892414000000295,
+      "gva_mean_ms": 1.1160124000000327,
+      "gqa_sd_ms": 0.12352045403057614,
+      "gva_sd_ms": 0.23513944752197485,
+      "gqa_p90_median_ms": 1.7748329999998091,
+      "gva_p90_median_ms": 1.3569170000002906,
+      "latency_reduction_percent": -8.928542815262386,
+      "cache_reduction_percent": 43.75
+    },
+    {
+      "context": 2048,
+      "gqa_median_ms": 2.727645500000042,
+      "gva_median_ms": 1.6800834999999292,
+      "gqa_mean_ms": 2.721229199999975,
+      "gva_mean_ms": 1.6744414000000152,
+      "gqa_sd_ms": 0.04155663104067114,
+      "gva_sd_ms": 0.02690171539240745,
+      "gqa_p90_median_ms": 2.7934999999996712,
+      "gva_p90_median_ms": 1.791750000000203,
+      "latency_reduction_percent": 38.49621738291786,
+      "cache_reduction_percent": 43.75
+    },
+    {
+      "context": 4096,
+      "gqa_median_ms": 5.316166999999927,
+      "gva_median_ms": 3.1063124999997083,
+      "gqa_mean_ms": 5.251341799999842,
+      "gva_mean_ms": 3.1127417999999185,
+      "gqa_sd_ms": 0.1094444487483385,
+      "gva_sd_ms": 0.0452659968583385,
+      "gqa_p90_median_ms": 5.862707999999994,
+      "gva_p90_median_ms": 3.1417089999998815,
+      "latency_reduction_percent": 40.63390973232701,
+      "cache_reduction_percent": 43.75
+    },
+    {
+      "context": 8192,
+      "gqa_median_ms": 10.295603999999958,
+      "gva_median_ms": 6.0282710000003625,
+      "gqa_mean_ms": 10.303683100000072,
+      "gva_mean_ms": 6.052795800000155,
+      "gqa_sd_ms": 0.1097733316096093,
+      "gva_sd_ms": 0.09305454687888631,
+      "gqa_p90_median_ms": 10.780042000000378,
+      "gva_p90_median_ms": 6.4199589999995865,
+      "latency_reduction_percent": 41.14933695975971,
+      "cache_reduction_percent": 43.75
+    }
+  ]
+}
