@@ -25,7 +25,11 @@ This is not the official GVA implementation, does not convert model weights, doe
 
 The prototype uses the query-absorption identity:
 
-`q_nope @ (vM)^T = (q_nope M^T) @ v^T`
+$$
+q^{\mathrm{nope}}(vM)^\top
+=
+(q^{\mathrm{nope}}M^\top)v^\top
+$$
 
 `check_gva_equivalence.py` compares explicit reconstructed-key content scores against absorbed-query content scores, then compares the full scores including the shared positional term. The recorded MPS FP32 check passed:
 
