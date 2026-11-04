@@ -1,0 +1,112 @@
+{
+  "model_reference": "Qwen/Qwen2.5-0.5B-Instruct",
+  "config_source": "published config fallback (ModuleNotFoundError)",
+  "dimensions": {
+    "hidden_size": 896,
+    "query_heads": 14,
+    "kv_groups": 2,
+    "head_dim": 64,
+    "d_n": 48,
+    "d_r": 16
+  },
+  "device": "mps",
+  "dtype": "float16",
+  "batch_size": 1,
+  "warmup": 20,
+  "repeats": 100,
+  "trial_index": 5,
+  "seed": 1234,
+  "timing_method": "perf_counter with device synchronization before and after each measured operator call",
+  "measurement_order_policy": "alternates by trial index and context index",
+  "caveat": "Independent operator-level prototype with synthetic caches; not official GVA, not a converted checkpoint, not end-to-end model generation.",
+  "results": [
+    {
+      "context": 512,
+      "gqa_cache_bytes_per_layer": 262144,
+      "gva_cache_bytes_per_layer": 147456,
+      "cache_reduction_percent": 43.75,
+      "gqa": {
+        "median_ms": 0.5855625000000253,
+        "p90_ms": 0.6475000000000231,
+        "mean_ms": 0.515069159999999
+      },
+      "gva_prototype": {
+        "median_ms": 0.3691664999999622,
+        "p90_ms": 0.39600000000006297,
+        "mean_ms": 0.38096041000000636
+      },
+      "latency_ratio_gva_over_gqa": 0.6304476464936642,
+      "latency_change_percent": -36.95523535063357,
+      "measurement_order": [
+        "GQA",
+        "GVA"
+      ]
+    },
+    {
+      "context": 2048,
+      "gqa_cache_bytes_per_layer": 1048576,
+      "gva_cache_bytes_per_layer": 589824,
+      "cache_reduction_percent": 43.75,
+      "gqa": {
+        "median_ms": 0.3208754999999841,
+        "p90_ms": 0.3410839999999915,
+        "mean_ms": 0.3224766499999987
+      },
+      "gva_prototype": {
+        "median_ms": 0.3747710000000515,
+        "p90_ms": 0.3951250000000517,
+        "mean_ms": 0.39033252999999823
+      },
+      "latency_ratio_gva_over_gqa": 1.1679638987709253,
+      "latency_change_percent": 16.796389877092533,
+      "measurement_order": [
+        "GVA",
+        "GQA"
+      ]
+    },
+    {
+      "context": 4096,
+      "gqa_cache_bytes_per_layer": 2097152,
+      "gva_cache_bytes_per_layer": 1179648,
+      "cache_reduction_percent": 43.75,
+      "gqa": {
+        "median_ms": 0.33272899999997607,
+        "p90_ms": 0.3442499999999349,
+        "mean_ms": 0.336878769999992
+      },
+      "gva_prototype": {
+        "median_ms": 0.34270849999995523,
+        "p90_ms": 0.3490420000000771,
+        "mean_ms": 0.34212714000000366
+      },
+      "latency_ratio_gva_over_gqa": 1.0299928770860967,
+      "latency_change_percent": 2.999287708609666,
+      "measurement_order": [
+        "GQA",
+        "GVA"
+      ]
+    },
+    {
+      "context": 8192,
+      "gqa_cache_bytes_per_layer": 4194304,
+      "gva_cache_bytes_per_layer": 2359296,
+      "cache_reduction_percent": 43.75,
+      "gqa": {
+        "median_ms": 0.3884795000000385,
+        "p90_ms": 0.40004199999998935,
+        "mean_ms": 0.3927108899999987
+      },
+      "gva_prototype": {
+        "median_ms": 0.3929579999999988,
+        "p90_ms": 0.4063750000000699,
+        "mean_ms": 0.3943433400000018
+      },
+      "latency_ratio_gva_over_gqa": 1.011528278840865,
+      "latency_change_percent": 1.1528278840865047,
+      "measurement_order": [
+        "GVA",
+        "GQA"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "status": "revised alternating-order benchmark",
+  "aggregation": "median of five trial-level medians",
+  "device": "mps",
+  "dtype": "float16",
+  "batch_size": 1,
+  "warmup": 20,
+  "repeats": 100,
+  "measurement_order_policy": "alternates by trial index and context index",
+  "caveat": "Independent operator-level prototype with synthetic caches; not official GVA, not a converted checkpoint, not end-to-end model generation.",
+  "results": [
+    {
+      "context": 512,
+      "gqa_cache_bytes_per_layer": 262144,
+      "gva_cache_bytes_per_layer": 147456,
+      "cache_reduction_percent": 43.75,
+      "gqa_median_of_trial_medians_ms": 0.4116249999999988,
+      "gva_median_of_trial_medians_ms": 0.3691664999999622,
+      "latency_change_percent": -10.31484968115074,
+      "trial_gqa_medians_ms": [
+        0.413145500000045,
+        0.30843699999993923,
+        0.4116249999999988,
+        0.29489599999998894,
+        0.5855625000000253
+      ],
+      "trial_gva_medians_ms": [
+        0.4759374999999677,
+        0.3621044999999601,
+        0.35218800000003103,
+        0.5010210000000459,
+        0.3691664999999622
+      ]
+    },
+    {
+      "context": 2048,
+      "gqa_cache_bytes_per_layer": 1048576,
+      "gva_cache_bytes_per_layer": 589824,
+      "cache_reduction_percent": 43.75,
+      "gqa_median_of_trial_medians_ms": 0.3201459999999656,
+      "gva_median_of_trial_medians_ms": 0.3490210000000049,
+      "latency_change_percent": 9.019322434152667,
+      "trial_gqa_medians_ms": [
+        0.3253334999999691,
+        0.3201459999999656,
+        0.31052100000000804,
+        0.31687499999993873,
+        0.3208754999999841
+      ],
+      "trial_gva_medians_ms": [
+        0.38172849999995595,
+        0.3490210000000049,
+        0.3000625000000312,
+        0.32299950000003186,
+        0.3747710000000515
+      ]
+    },
+    {
+      "context": 4096,
+      "gqa_cache_bytes_per_layer": 2097152,
+      "gva_cache_bytes_per_layer": 1179648,
+      "cache_reduction_percent": 43.75,
+      "gqa_median_of_trial_medians_ms": 0.3420204999999843,
+      "gva_median_of_trial_medians_ms": 0.3497080000000041,
+      "latency_change_percent": 2.247672288655256,
+      "trial_gqa_medians_ms": [
+        0.3420204999999843,
+        0.34464549999996263,
+        0.34216700000000433,
+        0.31372900000004034,
+        0.33272899999997607
+      ],
+      "trial_gva_medians_ms": [
+        0.34806199999998233,
+        0.3502500000000519,
+        0.3497080000000041,
+        0.35006299999995605,
+        0.34270849999995523
+      ]
+    },
+    {
+      "context": 8192,
+      "gqa_cache_bytes_per_layer": 4194304,
+      "gva_cache_bytes_per_layer": 2359296,
+      "cache_reduction_percent": 43.75,
+      "gqa_median_of_trial_medians_ms": 0.3921249999999654,
+      "gva_median_of_trial_medians_ms": 0.3974370000000005,
+      "latency_change_percent": 1.3546700669520018,
+      "trial_gqa_medians_ms": [
+        0.40012500000002893,
+        0.38795850000006293,
+        0.40110399999998547,
+        0.3921249999999654,
+        0.3884795000000385
+      ],
+      "trial_gva_medians_ms": [
+        0.3980834999999794,
+        0.3974370000000005,
+        0.39777049999994984,
+        0.3869585000000342,
+        0.3929579999999988
+      ]
+    }
+  ]
+}
